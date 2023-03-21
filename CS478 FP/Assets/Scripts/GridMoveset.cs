@@ -41,63 +41,6 @@ public class GridMoveset : MonoBehaviour
                     movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"));
                 }
             }
-        }
-
-        //if (Input.GetKey(KeyCode.W) && !isMoving)
-        //{
-        //    StartCoroutine(MovePlayer(Vector3.up));
-        //    anim.SetBool("isMovingUp", true);
-        //    anim.SetBool("isMovingLeft", false);
-        //    anim.SetBool("isMovingRight", false);
-        //    anim.SetBool("isMovingDown", false);
-        //}
-
-        //if (Input.GetKey(KeyCode.A) && !isMoving)
-        //{
-        //    StartCoroutine(MovePlayer(Vector3.left));
-        //    anim.SetBool("isMovingLeft", true);
-        //    anim.SetBool("isMovingUp", false);
-        //    anim.SetBool("isMovingRight", false);
-        //    anim.SetBool("isMovingDown", false);
-        //}
-
-        //if (Input.GetKey(KeyCode.S) && !isMoving)
-        //{
-        //    StartCoroutine(MovePlayer(Vector3.down));
-        //    anim.SetBool("isMovingDown", true);
-        //    anim.SetBool("isMovingRight", false);
-        //    anim.SetBool("isMovingLeft", false);
-        //    anim.SetBool("isMovingUp", false);
-        //}
-
-        //if (Input.GetKey(KeyCode.D) && !isMoving)
-        //{
-        //    StartCoroutine(MovePlayer(Vector3.right));
-        //    anim.SetBool("isMovingRight", true);
-        //    anim.SetBool("isMovingLeft", false);
-        //    anim.SetBool("isMovingUp", false);
-        //    anim.SetBool("isMovingDown", false);
-        //}
-
+        }      
     }
-
-    //private IEnumerator MovePlayer(Vector3 direction)
-    //{
-    //    isMoving = true;
-    //    float elapsedTime = 0;
-    //    origPos = transform.position;
-    //    targetPos = origPos + direction;
-
-    //    while(elapsedTime < timeToMove)
-    //    {
-    //        transform.position = Vector3.Lerp(origPos, targetPos, (elapsedTime / timeToMove));
-    //        elapsedTime += Time.deltaTime;
-    //        yield return null;
-    //    }
-
-    //    transform.position = targetPos;
-
-    //    isMoving = false;
-    //}
-
 }
