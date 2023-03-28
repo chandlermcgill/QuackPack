@@ -12566,11 +12566,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4414462150520220773, guid: b986d273f6fca2e46853dd8d06c5c7f4, type: 3}
   m_PrefabInstance: {fileID: 4414462149217295304}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1923823534 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4414462150520220774, guid: b986d273f6fca2e46853dd8d06c5c7f4, type: 3}
-  m_PrefabInstance: {fileID: 4414462149217295304}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1923823539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4414462150520220795, guid: b986d273f6fca2e46853dd8d06c5c7f4, type: 3}
@@ -12588,11 +12583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c0062f0ef70046488e203023a333317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  movePoint: {fileID: 40918010}
-  anim: {fileID: 1923823534}
+  MoveSpeed: 5
+  rb: {fileID: 333375463}
 --- !u!213 &1936036425
 Sprite:
   m_ObjectHideFlags: 0
