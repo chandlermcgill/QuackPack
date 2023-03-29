@@ -14,7 +14,8 @@ public class ScenesManager : MonoBehaviour
 
     public enum Scene
     {
-        ClassroomF
+        ClassroomF,
+        Hallway
     }
 
     public void LoadScene(Scene scene)
