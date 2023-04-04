@@ -7,14 +7,15 @@ public class DoorMove_Ref : MonoBehaviour
 {
     public int sceneBuildIndex;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Trigger entered");
+        Debug.Log("Trigger entered");
 
-        if (other.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            print("Switching Scene to " + sceneBuildIndex);
+            Debug.Log("Switching Scene to " + sceneBuildIndex);
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
