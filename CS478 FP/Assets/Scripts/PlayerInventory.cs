@@ -1,19 +1,45 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-//[CreateAssetMenu(fileName = "Item", menuName = "CS478 FP/Inventory")]
-//public class PlayerInventory : ScriptableObject
-//{
-//    [SerializeField] List<Item> items;
-//    [SerializeField] Transform itemsParent;
-//    [SerializeField] ItemSlot[] itemSlots;
+public class PlayerInventory : MonoBehaviour
+{
+    private List<InventItem> inventory = new List<InventItem>();
+    private Dictionary<ItemData, InventItem> itemDictionary = new Dictionary<ItemData, InventItem>();
 
-//    private void OnValidate()
-//    {
-//        if (itemsParent != null)
-//        {
-//            itemSlots = itemsParent.GetComponentsInChildren<ItemSlot>();
-//        }
-//    }
-//}
+    public void Add(ItemData itemData)
+    {
+        if (itemDictionary.TryGetValue(itemData, out InventItem item))
+        {
+            item.AddToStack();
+        }
+        else
+        {
+            InventItem newItem = new InventItem(itemData);
+            inventory.Add(newItem);
+            itemDictionary.Add(itemData, newItem);
+        }
+    }
+
+    public void Remove(ItemData itemData)
+    {
+        if (itemDictionary.TryGetValue(itemData, out InventItem item))
+        {
+            item.RemoveFromStack();
+            if(item.stackSize == 0)
+            {
+                inventory.Remove(item);
+                itemDictionary.Remove(itemData);
+            }
+        }
+    }
+
+    private void OnEnable()
+    {
+        
+    }
+    private void OnDisable()
+    {
+        
+    }
+}

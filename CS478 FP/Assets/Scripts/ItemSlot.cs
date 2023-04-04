@@ -1,31 +1,22 @@
-//using UnityEngine;
-//using UnityEditor.UI;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEditor.UI;
 
-//public class InventoryHandler : MonoBehaviour
-//{
-//    [SerializeField] Image image;
+public class InventoryHandler : MonoBehaviour
+{
+    public Image icon;
+    public TextMeshProUGUI labelText;
+    public TextMeshProUGUI stackSizeText;
 
-//    private Item _item;
-//    public Item item 
-//        { get { return _item; }
-//        set { _item = value;
-//            if (_item == null)
-//            {
-//                image.enabled = false;
-//            }
-//            else
-//            {
-//                image.sprite = _item.Icon;
-//                image.enabled = true;
-//            }
-//        }
-//    }
+    public void ClearSlot()
+    {
+        icon.enabled = false;
+        labelText.enabled = false;
+        stackSizeText.enabled = false;
+    }
 
-//    private void OnValidate()
-//    {
-//        if (image == null)
-//        {
-//            image = GetComponent<Image>();
-//        }
-//    }
-//}
+    //public void DrawSlot(InventoryItemData item)
+}
