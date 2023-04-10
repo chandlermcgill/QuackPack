@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    private List<InventItem> inventory = new List<InventItem>();
+    public static event Action<List<InventItem>> OnInventoryChange;
+
+    public List<InventItem> inventory = new List<InventItem>();
     private Dictionary<ItemData, InventItem> itemDictionary = new Dictionary<ItemData, InventItem>();
 
     public void Add(ItemData itemData)
@@ -12,12 +15,16 @@ public class PlayerInventory : MonoBehaviour
         if (itemDictionary.TryGetValue(itemData, out InventItem item))
         {
             item.AddToStack();
+            Debug.Log($"{item.itemData.displayName} total stack is now {item.stackSize}");
+            OnInventoryChange?.Invoke(inventory);
         }
         else
         {
             InventItem newItem = new InventItem(itemData);
             inventory.Add(newItem);
             itemDictionary.Add(itemData, newItem);
+            Debug.Log($"Added {itemData.displayName} to the inventory for the first time");
+            OnInventoryChange?.Invoke(inventory);
         }
     }
 
@@ -31,6 +38,7 @@ public class PlayerInventory : MonoBehaviour
                 inventory.Remove(item);
                 itemDictionary.Remove(itemData);
             }
+            OnInventoryChange?.Invoke(inventory);
         }
     }
 

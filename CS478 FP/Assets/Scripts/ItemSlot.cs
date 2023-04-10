@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.UI;
 
-public class InventoryHandler : MonoBehaviour
+public class ItemSlot : MonoBehaviour
 {
     public Image icon;
     public TextMeshProUGUI labelText;
@@ -18,5 +17,20 @@ public class InventoryHandler : MonoBehaviour
         stackSizeText.enabled = false;
     }
 
-    //public void DrawSlot(InventoryItemData item)
+    public void DrawSlot(InventItem item)
+    {
+        if (item == null)
+        {
+            ClearSlot();
+            return;
+        }
+
+        icon.enabled = true;
+        labelText.enabled = true;
+        stackSizeText.enabled = true;
+
+        icon.sprite = item.itemData.icon;
+        labelText.text = item.itemData.displayName;
+        stackSizeText.text = item.stackSize.ToString();
+    }
 }
