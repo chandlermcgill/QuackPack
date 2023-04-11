@@ -44,10 +44,10 @@ public class PlayerInventory : MonoBehaviour
 
     private void OnEnable()
     {
-        
+        PassItem.OnPasswordCollected += Add;
     }
     private void OnDisable()
     {
-        
+        PassItem.OnPasswordCollected -= Add;
     }
 }

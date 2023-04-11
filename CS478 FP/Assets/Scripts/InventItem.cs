@@ -8,6 +8,7 @@ public class InventItem
 {
     public ItemData itemData;
     public int stackSize;
+    public bool isStackable;
 
     public InventItem(ItemData item)
     {
@@ -17,7 +18,11 @@ public class InventItem
 
     public void AddToStack()
     {
-        stackSize++;
+        if (itemData.isStackable == true)
+        {
+            stackSize++;
+        }
+        
     }
     public void RemoveFromStack()
     {
