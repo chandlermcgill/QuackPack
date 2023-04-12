@@ -22,6 +22,10 @@ public class InventItem
         {
             stackSize++;
         }
+        else
+        {
+            stackSize = 1;
+        }
         
     }
     public void RemoveFromStack()

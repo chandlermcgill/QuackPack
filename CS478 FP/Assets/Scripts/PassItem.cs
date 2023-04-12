@@ -12,7 +12,7 @@ public class PassItem : MonoBehaviour, ICollectible
     public void Collect()
     {
         Debug.Log("Item has been picked up");
-        //Destroy(gameObject);
+        Destroy(gameObject);
         OnPasswordCollected?.Invoke(passwordData);
     }
 }

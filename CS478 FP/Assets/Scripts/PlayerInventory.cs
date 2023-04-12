@@ -14,9 +14,13 @@ public class PlayerInventory : MonoBehaviour
     {
         if (itemDictionary.TryGetValue(itemData, out InventItem item))
         {
-            item.AddToStack();
-            Debug.Log($"{item.itemData.displayName} total stack is now {item.stackSize}");
-            OnInventoryChange?.Invoke(inventory);
+            if (itemData.isStackable == true)
+            {
+                item.AddToStack();
+                Debug.Log($"{item.itemData.displayName} total stack is now {item.stackSize}");
+                OnInventoryChange?.Invoke(inventory);
+            }
+           
         }
         else
         {

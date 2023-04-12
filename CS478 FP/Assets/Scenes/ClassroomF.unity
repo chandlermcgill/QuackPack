@@ -7077,7 +7077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f4333d57b9050438e36a66b4a2f5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passwordData: {fileID: 0}
+  passwordData: {fileID: 11400000, guid: 97c2b4a1187d3af40b8cd90a3372a8f3, type: 2}
 --- !u!212 &695566475
 SpriteRenderer:
   m_ObjectHideFlags: 0
