@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BattleHUD : MonoBehaviour
 {
-    public Text nameText;
-    public Text levelText;
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI levelText;
     public Slider hpSlider;
 
 
