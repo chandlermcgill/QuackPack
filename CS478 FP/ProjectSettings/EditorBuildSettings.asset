@@ -4,11 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Classroom B.unity
-    guid: 93326cf6b22d4f241a3c761755099030
-  - enabled: 1
-    path: Assets/Scenes/Hallway.unity
-    guid: 356a584d4ae735145b604f5b514e7d4b
+  m_Scenes: []
   m_configObjects: {}
