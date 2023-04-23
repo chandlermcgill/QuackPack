@@ -62,17 +62,6 @@ public class RoomTrans : MonoBehaviour
 
             transitionAnimator = Instantiate(transAnimation, canvas.transform).GetComponent<Animator>();
             transitionAnimator.SetTrigger("Start");
-
-            //if (transitionAnimator != null)
-            //{
-            //    //Check if the animation has finished
-            //    //Change levels when animation is finished
-            //    if (transitionAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
-            //    {
-            //        //Send request for level to switch
-            //        RoomEvents.roomExit.Invoke(sceneToLoad, playerSpawnTransformName);
-            //    }
-            //}
         }
     }
 }
