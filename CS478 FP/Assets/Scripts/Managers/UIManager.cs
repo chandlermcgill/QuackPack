@@ -11,10 +11,20 @@ public class UIManager : ScriptableObject
 {
     //public GameObject healthDroppedText;
     private Canvas sceneCanvas;
+    //public GameState GameState { get; set; }
 
     private void OnEnable()
     {
+        //PlayerEvents.onSpawnInvent += 
         
+    }
+
+    private void OnPlayerMove(List<InventItem> inventory, GameObject Inventory)
+    {
+        if (sceneCanvas == null)
+        {
+            sceneCanvas = GameObject.FindObjectOfType<Canvas>();
+        }
     }
 
     private void OnDisable()

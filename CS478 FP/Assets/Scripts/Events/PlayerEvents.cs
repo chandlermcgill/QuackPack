@@ -9,4 +9,5 @@ public class PlayerEvents
 {
     public static UnityAction<Transform> onPlayerSpawned;
     public static UnityAction onPlayerDespawned;
+    public static UnityAction<List<ItemSlot>, Canvas> onSpawnInvent;
 }

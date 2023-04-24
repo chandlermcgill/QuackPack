@@ -34,5 +34,6 @@ public class GameManager : MonoBehaviour
         GameState = Instantiate(startingState);
         roomManager.GameState = GameState;
         playerManager.GameState = GameState;
+        //uiManager.GameState = GameState;
     }
 }

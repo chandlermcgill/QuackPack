@@ -2,13 +2,37 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInventory : MonoBehaviour
 {
     public static event Action<List<InventItem>> OnInventoryChange;
+    //public static PlayerInventory instance;
 
     public List<InventItem> inventory = new List<InventItem>();
     private Dictionary<ItemData, InventItem> itemDictionary = new Dictionary<ItemData, InventItem>();
+
+    private void Awake()
+    {
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //}
+        //else
+        //{
+        //    Destroy(this.gameObject);
+        //}
+
+        if (SceneManager.GetSceneByName("InventUI").isLoaded == false)
+        {
+            SceneManager.LoadSceneAsync("InventUI", LoadSceneMode.Additive);
+        }
+        else
+        {
+            SceneManager.UnloadSceneAsync("InventUI");
+        }
+
+    }
 
     public void Add(ItemData itemData)
     {

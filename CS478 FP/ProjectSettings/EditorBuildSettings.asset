@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hallway.unity
     guid: 356a584d4ae735145b604f5b514e7d4b
+  - enabled: 1
+    path: Assets/Scenes/Battle.unity
+    guid: db3dcbf1ddc7b16428b5c57c872bb287
   m_configObjects: {}

@@ -23,6 +23,7 @@ public class PlayerManager : ScriptableObject
         RoomEvents.roomLoaded += SpawnPlayer;
     }
 
+
     protected void SpawnPlayer(Transform defaultSpawnTransform)
     {
         if (GameState.playerSpawnLocation != "")
