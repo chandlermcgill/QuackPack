@@ -19,14 +19,6 @@ public class UIManager : ScriptableObject
         
     }
 
-    private void OnPlayerMove(List<InventItem> inventory, GameObject Inventory)
-    {
-        if (sceneCanvas == null)
-        {
-            sceneCanvas = GameObject.FindObjectOfType<Canvas>();
-        }
-    }
-
     private void OnDisable()
     {
         

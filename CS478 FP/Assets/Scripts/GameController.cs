@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour
         }
         else if (state == ActiveGameState.Battle)
         {
-            battleSystem.Start();
+            battleSystem.StartBattle();
         }
     }
 }
