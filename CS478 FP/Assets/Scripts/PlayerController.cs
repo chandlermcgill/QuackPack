@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void HandleUpdate()
+    public void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
         anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
