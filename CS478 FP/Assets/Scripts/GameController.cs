@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
     {
         if (state == ActiveGameState.FreeRoam)
         {
-            playerController.HandleUpdate();
+            playerController.Update();
         }
         else if (state == ActiveGameState.Battle)
         {
