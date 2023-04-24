@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c35ebf0ac01a3794ebf1b54f01aea1bc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - startingState: {fileID: 11400000, guid: 52a9eb9fce08fa34eae102213aed6ccf, type: 2}
+  - roomManager: {fileID: 11400000, guid: 9530b1e20554c01498589e3a67cacf74, type: 2}
+  - playerManager: {fileID: 11400000, guid: df3fa5dc3abef9b4ab0585dc5e1eedd1, type: 2}
+  - uiManager: {fileID: 11400000, guid: 7568f0f8d27e618489ed80664338254c, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

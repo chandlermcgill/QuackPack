@@ -1,17 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GridMoveset : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private bool isMoving;
     private Vector3 origPos, targetPos;
     private float moveSpeed = 4f;
     public LayerMask obstacleLayers;
     public Transform movePoint;
-    //private float moveSpeed;
     public Animator anim;
+
+    public event Action OnEncountered;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class GridMoveset : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void HandleUpdate()
     {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
         anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
@@ -43,5 +45,14 @@ public class GridMoveset : MonoBehaviour
                 }
             }
         }      
+    }
+
+    private void CheckForEncounters()
+    {
+        //if ()
+        //{
+        //    anim.SetBool("isMoving", false);
+        //    OnEncountered();
+        //}
     }
 }
