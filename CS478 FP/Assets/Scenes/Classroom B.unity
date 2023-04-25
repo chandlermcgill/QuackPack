@@ -8314,6 +8314,18 @@ MonoBehaviour:
   interactAction:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2068586720}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: StartDaBattle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 205955878}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -16249,6 +16261,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dcbff4d2b326fd4b85738026ab4eec0, type: 3}
+--- !u!114 &2068586720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9053803375200644656, guid: 1dcbff4d2b326fd4b85738026ab4eec0, type: 3}
+  m_PrefabInstance: {fileID: 2068586719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e289bb85ff0f9499c9a7fce367d3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!213 &2077661649
 Sprite:
   m_ObjectHideFlags: 0
