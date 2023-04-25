@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Interactable : MonoBehaviour
             if (Input.GetKeyDown(interactKey)) //Player presses key in range to interact
             {
                 interactAction.Invoke(); //Fire event
+                SceneManager.LoadScene("Battle");
             }
         }
     }

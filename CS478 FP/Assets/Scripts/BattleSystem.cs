@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST}
 
@@ -29,6 +30,11 @@ public class BattleSystem : MonoBehaviour
 
     // Start is called before the first frame update
     public void StartBattle()
+    {
+        state = BattleState.START;
+        StartCoroutine(SetupBattle());
+    }
+    public void Start()
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
@@ -114,11 +120,13 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.WON)
         {
             dialogueText.text = "You won the battle!";
-           
+            SceneManager.LoadScene("Classroom B");
+            
         }
         else if (state == BattleState.LOST)
         {
             dialogueText.text = "You were defeated.";
+            SceneManager.LoadScene("Start Menu");
 
         }
     }
