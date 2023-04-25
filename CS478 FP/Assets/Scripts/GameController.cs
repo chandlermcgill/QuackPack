@@ -14,11 +14,11 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        playerController.OnEncountered += StartBattle;
-        battleSystem.OnBattleOver += EndBattle;
+        playerController.OnEncountered += StartDaBattle;
+        battleSystem.OnBattleOver += EndDaBattle;
     }
 
-    void StartBattle()
+    public void StartDaBattle()
     {
         state = ActiveGameState.Battle;
         battleSystem.gameObject.SetActive(true);
@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
         battleSystem.StartBattle();
     }
 
-    void EndBattle(bool won)
+    void EndDaBattle(bool won)
     {
         state = ActiveGameState.FreeRoam;
         battleSystem.gameObject.SetActive(false);
@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour
         {
             playerController.Update();
         }
+
         else if (state == ActiveGameState.Battle)
         {
             battleSystem.StartBattle();

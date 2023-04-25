@@ -198,6 +198,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5758566939298470682, guid: b986d273f6fca2e46853dd8d06c5c7f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b986d273f6fca2e46853dd8d06c5c7f4, type: 3}
 --- !u!1 &202117239
@@ -9204,7 +9208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1213718615
 AudioListener:
   m_ObjectHideFlags: 0
@@ -9333,6 +9337,10 @@ PrefabInstance:
     - target: {fileID: 8869347720756819984, guid: 386c0e3577f0d8a45b6bba54893c0c2a, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869347720756819984, guid: 386c0e3577f0d8a45b6bba54893c0c2a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 386c0e3577f0d8a45b6bba54893c0c2a, type: 3}
@@ -14272,7 +14280,7 @@ GameObject:
   - component: {fileID: 2047088248}
   m_Layer: 0
   m_Name: Library_Enter
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

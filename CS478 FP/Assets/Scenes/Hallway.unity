@@ -4708,8 +4708,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.5, y: -281.3}
-  m_SizeDelta: {x: 375.90613, y: -139.94824}
+  m_AnchoredPosition: {x: -80.760895, y: -181.45221}
+  m_SizeDelta: {x: 947.9769, y: 84.8954}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514061301
 MonoBehaviour:
@@ -6884,7 +6884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &606868688
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6906,8 +6906,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.5, y: -281.3}
-  m_SizeDelta: {x: 375.90613, y: -139.94824}
+  m_AnchoredPosition: {x: -100.4, y: -180.7}
+  m_SizeDelta: {x: 1169.9747, y: 62.1265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &606868689
 MonoBehaviour:
@@ -6958,7 +6958,7 @@ GameObject:
   - component: {fileID: 677282876}
   m_Layer: 0
   m_Name: Library_Exit
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7013,7 +7013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -711, y: 73.386}
+  m_AnchoredPosition: {x: -782, y: 70.923}
   m_SizeDelta: {x: 442.943, y: 445.28}
   m_Pivot: {x: 0.50000054, y: 0.5000001}
 --- !u!114 &682866579
@@ -10339,7 +10339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1464747190}
+      - m_Target: {fileID: 1731058523}
         m_TargetAssemblyTypeName: NPC, Assembly-CSharp
         m_MethodName: NextLine
         m_Mode: 1
@@ -14660,7 +14660,7 @@ GameObject:
   - component: {fileID: 1729874754}
   m_Layer: 0
   m_Name: ClassB_Exit
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
